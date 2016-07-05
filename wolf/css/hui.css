@@ -1,0 +1,48 @@
+.boss{
+			width: 320px;
+			height: 480px;
+			background:url(../game_bg.jpg);
+			position: relative;
+			margin:auto; 
+		}
+		.da{
+			width: 108px;
+			height: 101px;
+			overflow: hidden;
+			position: absolute;
+			top: 120px;
+			left: 95px;
+			display: none;
+		}
+		.xiao{
+			width: 108px;
+			height: 101px;
+			overflow: hidden;
+			position: absolute;
+		}
+		.zi{
+			font-size: 30px;
+			color: #abc;
+			text-align: center;
+			line-height: 500px;
+			cursor: pointer;
+		}
+		.tiao{
+			width: 180px;
+			position: absolute;
+			top: 66px;
+			left: 63px;
+			overflow: hidden;
+		}
+		.tiao img{
+			width: 180px;
+			height: 16px;
+		}
+		.da img{
+			width: 1080px;
+			
+		}
+		.tiaoli{
+			width: 360px;
+			height: 36px;
+		}

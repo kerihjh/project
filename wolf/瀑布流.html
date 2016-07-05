@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#boss{
+			position: relative;
+		}
+		#boss div{
+			position: absolute;
+			width: 200px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="boss">
+		<!-- 很多div -->
+	</div>
+</body>
+	<script type="text/javascript">
+		var boss = document.getElementById("boss");
+		var divs =[];
+		var heights = [];
+
+		//	create div-s in boss
+		create(0,20);
+		function create(n1,n2){
+			for(var i=n1;i<n2;i++){
+			var oDiv = document.createElement("div");
+			oDiv.innerHTML=i;
+			oDiv.style.height = fnRand(100,300)+"px";
+			boss.appendChild(oDiv);
+			divs[i]= oDiv;
+			}
+			arrange();
+		}
+
+		//排版
+		function arrange(){
+			var sw= document.body.offsetWidth;
+			var l = 0 ;
+			var t = 0 ;
+			var MainW = 0 ;
+			var isfirst = true;
+			console.log(sw);
+			for (var i = 0 , i< divs.length;i++) {
+				
+			 }
+		}
+
+
+		function fnRand(m,n){
+			var r = Math.round(Math.random()*(n-m)+m);
+			return r;
+		}
+	</script>
+</html>
