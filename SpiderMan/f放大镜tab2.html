@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.boss{
+			width: 500px;
+			height: 300px;
+			border: 1px red solid;
+			position: relative;
+			overflow: hidden;
+			display: inline-block;
+		}
+		.boss img{
+			width: 500px;
+			height: 300px;
+			display: none;
+		}
+		.pic{
+			width: 250px;
+			height: 150px;
+			position: absolute;
+			background: red;
+			opacity: 0.3;
+			cursor: move;
+			display: none;
+		}
+		.right{
+			width: 550px;
+			height: 350px;
+			border: black 1px solid;
+			overflow: hidden;
+			display: none;
+			float: right;
+		}
+		.right img{
+			width: 1100px;
+			height: 700px;
+			display: none;
+		}
+		.r{
+			height: 100px;
+			width: 500px;
+			border: 1px red black;
+			cursor: pointer;
+		}
+		.r img{
+			width: 123px;
+			height: 70px;
+			float: left;
+			margin-right:2px; 
+
+		}
+	</style>
+</head>
+<body>
+	<div id="boss" class="boss">
+			<img style="display: block;" src="sp.jpg" alt="">
+
+			<div id="pic" class="pic"></div>
+	</div>
+	<div id="right" class="right">
+			<img style="display: block;" src="sp.jpg" alt="">
+	</div>
+	<div id="r" class="r">
+			<img src="sp.jpg" alt="">
+			<img src="sp5.jpg" alt="">
+			<img src="sp2.jpg" alt="">
+			<img src="sp3.jpg" alt="">
+	</div>
+</body>
+	<script type="text/javascript">
+		var boss=document.getElementById("boss");
+		var pic=document.getElementById("pic");
+		var pics=boss.getElementsByTagName("img");
+		var rights=document.getElementById('right').getElementsByTagName("img");
+		var rs=document.getElementById("r").getElementsByTagName("img");
+
+		for (var i =0; i < rs.length; i++) {
+			 rs[i].onclick=function(){
+			 	this==rs[i];
+			 	var a=this.getAttribute("src");//获取值
+                pics[0].setAttribute("src",a);//重新建立一个值
+                rights[0].setAttribute("src",a);
+			 }
+		}
+		boss.onmousemove=function(event){
+			var e= event || window.event;
+			
+			
+			pic.style.display="block";
+			right.style.display="block";
+			var x = event.clientX - boss.offsetLeft-pic.offsetWidth/2; 
+			var y = event.clientY - boss.offsetTop-pic.offsetHeight/2; 
+			var endx = boss.clientWidth-pic.clientWidth;
+			var endy = boss.clientHeight-pic.clientHeight;
+
+			if (x<0) {
+				x=0;
+			}
+			if (x>endx) {
+				x=endx;
+			}
+			if (y>endy) {
+				y=endy;
+			}
+			if (y<0) {
+				y=0
+			}
+
+			pic.style.left=x +'px';
+			pic.style.top=y +'px';
+
+			var num = right.offsetWidth/pic.offsetWidth;
+			right.scrollLeft=x*num;
+			right.scrollTop=y*num;
+			document.onmouseout=function(event){
+				var e= event || window.event;
+				document.onmousemove=null;
+				pic.style.display="none";
+				right.style.display="none";	
+
+			}
+		}
+	
+	</script>
+</html>

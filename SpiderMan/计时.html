@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body> 
+		<div id="a"></div>
+</body>
+	<script type="text/javascript">
+	
+		var time;
+		var i=0;
+		function Myalert(){
+			var idD = document.getElementById("a");
+			i++
+			idD.innerText=i;
+		}
+		time=setInterval(Myalert,1000)
+	</script>
+</html>

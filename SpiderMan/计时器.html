@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="MyT">
+		<span id="h">0</span>
+		<span id="m">0</span>
+		<span id="s">0</span>
+	</div>
+</body>
+<script type="text/javascript">
+ var time;
+ var h = 0 , m = 0 , s = 0;
+ var h=document.getElementById("h");
+ var m=document.getElementById("m");
+ var s=document.getElementById("s");
+	function clock(){
+		s++;
+		if (s==60){
+			m++;
+			s=0
+		}
+		if (m==60) {
+			h++;
+			m==0;
+		}
+
+	}
+
+	time = setInterval(clock,1000);
+	
+</script>
+</html>

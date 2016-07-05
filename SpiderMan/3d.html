@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+	body{
+		transform-style:preserve-3d;
+		perspective:1000px;
+		background: black;
+
+	}
+		.wrap{
+			width: 300px;
+			height: 300px;
+			margin: 50px auto;
+			background: url(dd.jpg) no-repeat; 
+			background-size: 100%;
+			transform:rotateX(-10deg);
+			position: relative;
+			transform-style:preserve-3d;
+			top:200px;
+			-webkit-animation-name:move0;
+			-webkit-animation-duration:3s;
+			-webkit-animation-timing-function:linear;
+			-webkit-animation-delay:3.5s;
+			-webkit-animation-iteration-count:1;
+			animation-fill-mode:both;  
+
+		}
+		@-webkit-keyframes move0{
+			from{transform:rotateX(-20deg) rotateY(0deg);}
+				20%{transform:rotateX(-20deg) rotateY(0deg);}
+			to{
+				transform: rotateX(-20deg) rotateY(360deg); 
+			}
+		}
+		.wrap div{
+			width: 300px;
+			height: 165px;
+			position: absolute;
+			border: 2px solid white;
+
+		}
+		.w1{
+			background: url(sp.jpg) no-repeat;
+			background-size: 100%;
+			/* transform:translateZ(500px); */
+		-webkit-animation-name:move10;
+		-webkit-animation-duration:2s;
+		-webkit-animation-timing-function:cubic-bezier(0);
+		-webkit-animation-delay:1s;
+			animation-fill-mode:forwards; 
+			-webkit-box-reflect:below 2px -webkit-linear-gradient(bottom,rgba(0,0,0,0.1) 40% ,rgba(0,0,0,0) 30% ,rgba(0,0,0,0.1) 20%);;
+		}
+		@-webkit-keyframes move10{
+			 from{transform:rotateY(0deg) translateZ(0px);}		
+				50%{
+					transform: rotateY(360deg) translateZ(180px);
+				}
+			to{transform:rotateY(0deg) translateZ(360px);}
+		}
+		.w2{
+			background: url(sp7.jpg) no-repeat;
+			background-size: 100%;
+			/* transform:translateZ(-500px); */
+			-webkit-animation-name:move20;
+			-webkit-animation-duration:2s;
+			-webkit-animation-timing-function:cubic-bezier(0);
+			-webkit-animation-delay:2.5s;
+			-webkit-animation-fill-mode:both; 
+			-webkit-box-reflect:below 2px -webkit-linear-gradient(bottom,rgba(0,0,0,0.1) 40% ,rgba(0,0,0,0) 30% ,rgba(0,0,0,0.1) 20%);;
+		}
+		@-webkit-keyframes move20{
+			 from{transform:translateZ(0px);}		
+				50%{
+					transform: rotateY(360deg) translateZ(0px);
+				}
+			to{transform:translateZ(-360px);}
+		}
+		.w3{
+			background: url(sp2.jpg) no-repeat;
+			background-size: 100%;
+			
+			-webkit-animation-name:move30;
+			-webkit-animation-duration:2s;
+			-webkit-animation-delay:1.5s;
+			-webkit-animation-fill-mode:both; 
+			-webkit-box-reflect:below 2px -webkit-linear-gradient(bottom,rgba(0,0,0,0.1) 40% ,rgba(0,0,0,0) 30% ,rgba(0,0,0,0.1) 20%);;
+		}
+		@-webkit-keyframes move30{
+			from{transform:rotateY(0deg) translateZ(0px);}			
+			to{transform:rotateY(60deg)
+				translateZ(350px);}
+		}
+		.w4{
+			background: url(sp3.jpg) no-repeat;
+			background-size: 100%;
+			
+			-webkit-animation-name:move40;
+			-webkit-animation-duration:2s;
+			-webkit-animation-timing-function:cubic-bezier(0);
+			-webkit-animation-delay:2s;
+			animation-fill-mode:forwards; 
+			-webkit-box-reflect:below 2px -webkit-linear-gradient(bottom,rgba(0,0,0,0.1) 40% ,rgba(0,0,0,0) 30% ,rgba(0,0,0,0.1) 20%);;
+		}
+		@-webkit-keyframes move40{
+			 from{transform:translateZ(0px);}		
+			
+			to{transform:rotateY(-60deg)
+				translateZ(-350px);}
+		}
+		.w5{
+			background: url(sp6.jpg) no-repeat;
+			background-size: 100%;
+			
+			-webkit-animation-name:move50;
+			-webkit-animation-duration:2s;
+			-webkit-animation-timing-function:cubic-bezier(0);
+			-webkit-animation-delay:3s;
+			animation-fill-mode:forwards; 
+		-webkit-box-reflect:below 2px -webkit-linear-gradient(bottom,rgba(0,0,0,0.1) 40% ,rgba(0,0,0,0) 30% ,rgba(0,0,0,0.1) 20%);;
+		}
+		@-webkit-keyframes move50{
+			 from{transform:translateZ(0px);}		
+			50%{
+				transform:rotateY(240deg)
+				translateZ(350px);
+			}
+			to{transform:rotateY(240deg)
+				translateZ(350px);
+			}
+		}
+		.w6{
+			background: url(sp5.jpg) no-repeat;
+			background-size: 100%;
+			-webkit-animation-name:move60;
+			-webkit-animation-duration:2s;
+			-webkit-animation-timing-function:cubic-bezier(0);
+			-webkit-animation-delay:3.5s;
+			animation-fill-mode:forwards; 
+			-webkit-box-reflect:below 2px -webkit-linear-gradient(bottom,rgba(0,0,0,0.1) 40% ,rgba(0,0,0,0) 30% ,rgba(0,0,0,0.1) 20%);;
+		}
+			@-webkit-keyframes move60{
+			 from{transform:translateZ(0px);}		
+			50%{
+				transform:rotateY(-240deg)
+				translateZ(-350px);
+			}
+			to{transform:rotateY(-240deg)
+				translateZ(-350px);
+			}
+		}
+	
+		.a1{animation-name:move1;
+	animation-duration:0s;
+	animation-timing-function:linear;
+	animation-delay:0s;
+	animation-fill-mode:forwards;
+	background: url(dd.jpg);
+	background-size: 100%; 
+		}
+		@keyframes move1{
+	form{transform:translateZ(2px);}
+	  50%{transform:translateZ(2px);}
+	to{transform:translateZ(2px);}
+	   }
+		.a2{
+	animation-name:move2;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:6.6s;
+	animation-fill-mode:forwards; 
+	background: url(001.jpg);
+		}
+		@keyframes move2{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	  50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+		}
+	
+		.a3{
+	animation-name:move3;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:6.7s;
+	animation-fill-mode:forwards; 
+	background: url(01.jpg);
+		}
+		@keyframes move3{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	  50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+		}
+	.a4{
+	animation-name:move4;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:6.8s;
+	animation-fill-mode:forwards; 
+	background: url(02.jpg);
+}
+@keyframes move4{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+	.a5{
+	animation-name:move5;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:6.9s;
+	animation-fill-mode:forwards; 
+	background: url(1.jpg);
+}
+@keyframes move5{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a6{
+	animation-name:move6;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7s;
+	animation-fill-mode:forwards; 
+	background: url(2.jpg);
+}
+@keyframes move6{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a7{
+	animation-name:move7;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.1s;
+	animation-fill-mode:forwards; 
+	background: url(3.jpg);
+}
+@keyframes move7{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+ .a8{
+	animation-name:move8;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.2s;
+	animation-fill-mode:forwards; 
+	background: url(4.jpg);
+}
+@keyframes move8{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a9{
+	animation-name:move9;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.3s;
+	animation-fill-mode:forwards; 
+	background: url(5.jpg);
+}
+@keyframes move9{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a10{
+	animation-name:move100;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.4s;
+	animation-fill-mode:forwards; 
+	background: url(6.jpg);
+}
+@keyframes move100{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+} 
+.a11{
+	animation-name:move11;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.5s;
+	animation-fill-mode:forwards; 
+	background: url(7.jpg);
+}
+@keyframes move11{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a12{
+	animation-name:move12;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.6s;
+	animation-fill-mode:forwards; 
+	background: url(8.jpg);
+}
+@keyframes move12{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a13{
+	animation-name:move13;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.7s;
+	animation-fill-mode:forwards; 
+	background: url(9.jpg);
+}
+@keyframes move13{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+ .a14{
+	animation-name:move14;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.8s;
+	animation-fill-mode:forwards; 
+	background: url(10.jpg);
+}
+@keyframes move14{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a15{
+	animation-name:move15;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:7.9s;
+	animation-fill-mode:forwards;
+	background: url(11.jpg); 
+}
+@keyframes move15{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a16{
+	animation-name:move16;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:8s;
+	animation-fill-mode:forwards; 
+	background: url(12.jpg);
+}
+@keyframes move16{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a17{
+	animation-name:move17;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:8.1s;
+	animation-fill-mode:forwards; 
+	background: url(13.jpg);
+}
+@keyframes move17{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+.a18{
+	animation-name:move18;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:8.2s;
+	animation-fill-mode:forwards; 
+	background: url(14.jpg);
+}
+@keyframes move18{
+	form{transform:rotateY(0deg) translateZ(0px);}
+	 50%{transform:translateZ(1px);}
+	to{transform:rotateY(0deg) translateZ(2px);}
+}
+	.a19{animation-name:move19;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:8.3s;
+	animation-fill-mode:forwards;
+	background: url(15.jpg);
+	background-size: 100%; 
+}
+@keyframes move19{
+	form{transform:translateZ(0px);}
+	  50%{transform:translateZ(1px);}
+	to{transform:translateZ(2px);}
+	   }   
+	   .a20{animation-name:move200;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:8.4s;
+	animation-fill-mode:forwards;
+	background: url(dd1.jpg);
+	background-size: 100%; 
+}
+@keyframes move200{
+	form{transform:translateZ(0px);}
+	  50%{transform:translateZ(1px);}
+	to{transform:translateZ(2px);}
+	   }   
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="w1"></div>
+		<div class="w2"></div>
+		<div class="w3"></div>
+		<div class="w4"></div>
+		<div class="w5"></div>
+		<div class="w6"></div>
+		<div class="a1"></div>
+		<div class="a2"></div>
+		<div class="a3"></div>
+		<div class="a4"></div>
+		<div class="a5"></div>
+		<div class="a6"></div>
+		<div class="a7"></div>
+		<div class="a8"></div>
+		<div class="a9"></div>
+		<div class="a10"></div>
+		<div class="a11"></div>
+		<div class="a12"></div>
+		<div class="a13"></div>
+		<div class="a14"></div>
+		<div class="a15"></div>
+		<div class="a16"></div>
+		<div class="a17"></div>
+		<div class="a18"></div> 
+		<div class="a19"></div> 
+		<div class="a20"></div> 
+	</div>
+</body>
+</html>

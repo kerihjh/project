@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//函数的定义
+		//求两个数最大值
+		function max(num1,num2){
+			var r = 0;
+			if (num1 >=num2) {
+				r=num1;
+			}
+			else{
+				r = num2;
+			}
+			return r;
+		}
+
+	//函数调用
+	var a =10, b=11;
+	//a,b是实际调用的参数，叫做实际参数或实参
+	var result = max (a,b);
+	console.log(result);
+
+	//函数的名字
+	//函数的名字是一个值，可以赋值给其他变量
+	var c = max;
+	var result2 = c(10,20);
+	console.log(result2);
+
+	//3.函数作为形参传递
+	//求两个数中的最大值，并把这个最大值和一个数相加。
+	function add (fn,num1,num2,num3){
+		var r = 0;
+		var t = fn(num1, num2);
+		r = t + num3;
+		result = r;
+	}
+
+	var result3 = add(max,10,20,30);
+	console.log(result3);
+
+	//4无形式参数 无返回值
+		function sayhi(){
+		document.write("hi");
+	}
+	sayhi();
+
+	function sayhi2(name){
+		document.write("<br />");
+		document.write("hi"+name);
+	}
+	sayhi2("keri");
+	//求年份是不是闰年
+	function leap(year){
+		var r = false;
+		if((year % 4 == 0 && year % 100 != 0 )||(year % 400 == 0)){
+			r = true;
+		}
+		return  r;
+		
+	}
+		document.write(leap(2016));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
