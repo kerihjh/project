@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="boss">
+		 <div id="r" class="box">
+			<span id="span">aaaa</span>
+		  </div>
+	 </div>
+</body>
+	<script type="text/javascript">
+		var boss=document.getElementById("boss");
+		var r = document.getElementById("r");
+		var span = document.getElementById("span");
+		var one = document.createElement("div");//js创建HTML标签
+		one.className="box2";//获取CSS样式
+		
+		// console.log(a.getAttribute("id"));
+		//r.innerHTML=a.getAttribute("id");
+		boss.replaceChild(one,r);//父元素下子元素替换（新，旧）
+		boss.removeChild(r);//移除父节点的某个节点
+		boss.cloneNode(true);
+		var text1=document.createTextNode("新建文本");
+		var text2=document.createTextNode("替换");
+
+
+	</script>
+</html>
